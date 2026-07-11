@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/hero-bg.svg"
+          src="/hero-bg.png"
           alt=""
           fill
           priority
