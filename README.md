@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Secretum – Detektivní služby
+
+Next.js (App Router + TypeScript + Tailwind CSS) web pro detektivní kancelář
+Secretum, postavený podle přiloženého designu (tmavý motiv, červené akcenty).
+
+### Spuštění
+
+```bash
+npm install
+npm run dev
+```
+
+Aplikace poběží na [http://localhost:3000](http://localhost:3000) (případně na
+dalším volném portu, pokud je 3000 obsazený).
+
+### Struktura
+
+- `src/app/page.tsx` – hlavní stránka skládající sekce
+- `src/components/Header.tsx` – navigace s logem
+- `src/components/Hero.tsx` – úvodní sekce s nadpisem a tlačítky
+- `src/components/Services.tsx` – řada ikon se službami
+- `src/components/WhyChooseAndContact.tsx` – důvody + kontaktní údaje
+- `src/components/Footer.tsx` – patička
+
+> Poznámka: pozadí hero sekce je zatím CSS gradient jako placeholder – pro
+> přesnou shodu s originálem doplňte reálnou fotografii do `public/` a
+> nahraďte gradient v `Hero.tsx` obrázkem (`next/image` s `fill`).
+
 
 ## Getting Started
 
