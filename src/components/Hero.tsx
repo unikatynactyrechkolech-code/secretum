@@ -4,20 +4,10 @@ export default function Hero() {
   return (
     <section
       id="uvod"
-      className="relative flex min-h-[92vh] items-center overflow-hidden bg-black pt-32 pb-16"
+      className="relative bg-black pt-32 pb-16"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <Image
-          src="/hero-bg.png"
-          alt=""
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10">
-        <div className="max-w-2xl">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:px-10">
+        <div>
           <p className="mb-4 text-sm font-semibold tracking-[0.35em] text-accent">
             DETEKTIVNÍ KANCELÁŘ
           </p>
@@ -52,6 +42,16 @@ export default function Hero() {
               NAŠE SLUŽBY
             </a>
           </div>
+        </div>
+
+        <div className="relative h-72 w-full overflow-hidden rounded-lg sm:h-96 lg:h-[520px]">
+          <Image
+            src="/hero-bg.png"
+            alt="Detektiv při práci"
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
