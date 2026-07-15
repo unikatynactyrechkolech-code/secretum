@@ -2,49 +2,46 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      id="uvod"
-      className="relative bg-black pt-32 pb-16"
-    >
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:px-10">
+    <section id="uvod" className="relative flex-1 bg-black">
+      <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 items-center gap-6 px-4 py-2 lg:grid-cols-2 lg:px-10">
         <div>
-          <p className="mb-4 text-sm font-semibold tracking-[0.35em] text-accent">
+          <p className="mb-2 text-xs font-semibold tracking-[0.3em] text-accent sm:text-sm">
             DETEKTIVNÍ KANCELÁŘ
           </p>
-          <h1 className="font-heading text-4xl leading-tight tracking-wide text-white sm:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-2xl leading-tight tracking-wide text-white sm:text-3xl lg:text-5xl">
             Pravda ukrytá
             <br />
             <span className="italic text-accent">v detailech</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-3 max-w-xl text-xs leading-relaxed text-white/80 sm:text-sm lg:text-base">
             Diskrétní detektivní služby pro soukromé osoby i firmy.
             Poskytujeme profesionální šetření, sledování osob, prověřování
             nevěry a zajišťování důkazních materiálů v souladu s platnou
             legislativou.
           </p>
 
-          <p className="mt-6 font-heading text-lg italic tracking-wide text-white/90 sm:text-xl">
+          <p className="mt-3 font-heading text-sm italic tracking-wide text-white/90 sm:text-base lg:text-lg">
             Důkazy, na které se můžete spolehnout.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
             <a
               href="#kontakt"
-              className="flex items-center justify-center rounded-md bg-accent px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-red-700"
+              className="flex items-center justify-center rounded-md bg-accent px-5 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-red-700 sm:text-sm"
             >
               NEZÁVAZNÁ KONZULTACE
             </a>
             <a
               href="#sluzby"
-              className="flex items-center justify-center rounded-md border border-white/30 px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition-colors hover:border-accent hover:text-accent"
+              className="flex items-center justify-center rounded-md border border-white/30 px-5 py-2 text-xs font-semibold tracking-wide text-white transition-colors hover:border-accent hover:text-accent sm:text-sm"
             >
               NAŠE SLUŽBY
             </a>
           </div>
         </div>
 
-        <div className="relative h-72 w-full overflow-hidden rounded-lg sm:h-96 lg:h-[520px]">
+        <div className="relative h-32 w-full overflow-hidden rounded-lg sm:h-52 lg:h-[280px]">
           <Image
             src="/hero-bg.png"
             alt="Detektiv při práci"

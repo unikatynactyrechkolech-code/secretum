@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black py-6">
-      <div className="mx-auto max-w-7xl px-6 text-center text-xs tracking-wide text-white/40 lg:px-10">
-        © {new Date().getFullYear()} Secretum – Detektivní služby. Všechna práva vyhrazena.
+    <footer className="border-t border-white/10 bg-black py-1">
+      <div className="mx-auto max-w-7xl px-4 text-center text-[10px] tracking-wide text-accent lg:px-10">
+        web by webpojede.cz
       </div>
     </footer>
   );

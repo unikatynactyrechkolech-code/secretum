@@ -9,13 +9,13 @@ const services = [
 export default function Services() {
   return (
     <section id="sluzby" className="border-t border-white/10 bg-black">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-6 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:px-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-2 px-4 py-2 sm:grid-cols-3 lg:grid-cols-5 lg:px-10">
         {services.map((label) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-4 text-center"
+            className="flex flex-col items-center gap-1 text-center"
           >
-            <p className="text-sm font-semibold tracking-wide text-white">
+            <p className="text-[11px] font-semibold tracking-wide text-white sm:text-xs">
               {label}
             </p>
           </div>
