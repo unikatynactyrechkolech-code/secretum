@@ -10,17 +10,19 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="sluzby" className="border-t border-white/10 bg-black">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-6 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:px-10">
+    <section id="sluzby" className="shrink-0 border-t border-white/10 bg-black">
+      <div className="mx-auto grid max-w-7xl grid-cols-3 gap-y-2 px-4 py-2 sm:grid-cols-5 lg:px-10 lg:py-4">
         {services.map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-4 text-center"
+            className="flex flex-col items-center gap-1 text-center lg:gap-2"
           >
-            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-accent/60 text-accent">
-              <Icon size={28} />
+            <div className="flex h-8 w-8 items-center justify-center rounded-full border border-accent/60 text-accent sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+              <Icon size={16} className="sm:hidden" />
+              <Icon size={20} className="hidden sm:block lg:hidden" />
+              <Icon size={22} className="hidden lg:block" />
             </div>
-            <p className="text-sm font-semibold tracking-wide text-white">
+            <p className="text-[9px] font-semibold tracking-wide text-white sm:text-[11px] lg:text-sm">
               {label}
             </p>
           </div>

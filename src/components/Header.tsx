@@ -16,33 +16,33 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-30">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <a href="#uvod" className="flex items-center gap-3">
+    <header className="relative z-30 w-full shrink-0 border-b border-white/10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-10">
+        <a href="#uvod" className="flex items-center gap-2">
           <Image
-            src="/logo.jpg"
+            src="/logo-emblem.png"
             alt="Secretum logo"
-            width={64}
-            height={64}
+            width={140}
+            height={140}
             priority
-            className="h-14 w-14 rounded-full object-cover"
+            className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
           />
           <div className="leading-tight">
-            <p className="font-heading text-xl tracking-[0.15em] text-white">
+            <p className="font-heading text-sm tracking-[0.12em] text-white sm:text-base">
               SECRETUM
             </p>
-            <p className="text-[10px] tracking-[0.35em] text-accent">
+            <p className="text-[8px] tracking-[0.3em] text-accent sm:text-[9px]">
               DETEKTIVNÍ SLUŽBY
             </p>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link, i) => (
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium tracking-wider transition-colors hover:text-accent ${
+              className={`text-xs font-medium tracking-wider transition-colors hover:text-accent ${
                 i === 0 ? "border-b-2 border-accent pb-1 text-accent" : "text-white"
               }`}
             >
@@ -56,7 +56,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Otevřít menu"
         >
-          {open ? <X size={28} /> : <Menu size={28} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 

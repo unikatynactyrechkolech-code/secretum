@@ -6,15 +6,15 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex h-screen flex-col overflow-hidden">
       <Header />
-      <main className="flex-1">
+      <main className="flex flex-1 flex-col overflow-hidden">
         <Hero />
         <Services />
         <WhyChooseAndContact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
