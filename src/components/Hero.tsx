@@ -60,24 +60,21 @@ export default function Hero() {
 
         {/* Desktop side image, blending into black on all edges */}
         <div className="relative hidden h-[220px] w-full md:block sm:h-[280px] lg:h-[360px] xl:h-[420px]">
+          <Image
+            src="/hero-bg.png"
+            alt="Detektiv při práci"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
           <div
-            className="absolute inset-0"
+            className="pointer-events-none absolute inset-0"
             style={{
-              maskImage:
-                "radial-gradient(ellipse 75% 75% at center, black 45%, transparent 85%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse 75% 75% at center, black 45%, transparent 85%)",
+              background:
+                "radial-gradient(ellipse 60% 60% at center, transparent 0%, black 100%)",
             }}
-          >
-            <Image
-              src="/hero-bg.png"
-              alt="Detektiv při práci"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          />
         </div>
       </div>
     </section>
