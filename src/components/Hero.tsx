@@ -3,9 +3,23 @@ import { UserRound, ListChecks } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="uvod" className="relative flex flex-1 items-center bg-black">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-4 px-4 lg:grid-cols-2 lg:gap-8 lg:px-10">
-        <div className="relative z-10">
+    <section id="uvod" className="relative flex flex-1 items-center overflow-hidden bg-black">
+      {/* Mobile background image with dark overlay */}
+      <div className="absolute inset-0 md:hidden">
+        <Image
+          src="/hero-bg.png"
+          alt="Detektiv při práci"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-4 px-4 lg:grid-cols-2 lg:gap-8 lg:px-10">
+        <div>
           <p className="mb-1.5 text-[10px] font-semibold tracking-[0.3em] text-accent sm:text-xs lg:mb-3 lg:text-sm">
             DETEKTIVNÍ KANCELÁŘ
           </p>
@@ -44,22 +58,26 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative hidden h-[220px] w-full overflow-hidden rounded-lg sm:h-[280px] md:block lg:h-[360px] xl:h-[420px]">
-          <Image
-            src="/hero-bg.png"
-            alt="Detektiv při práci"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
+        {/* Desktop side image, blending into black on all edges */}
+        <div className="relative hidden h-[220px] w-full md:block sm:h-[280px] lg:h-[360px] xl:h-[420px]">
           <div
-            className="pointer-events-none absolute inset-y-0 left-0 w-1/3 backdrop-blur-xl"
+            className="absolute inset-0"
             style={{
-              maskImage: "linear-gradient(to right, black, transparent)",
-              WebkitMaskImage: "linear-gradient(to right, black, transparent)",
+              maskImage:
+                "radial-gradient(ellipse 75% 75% at center, black 45%, transparent 85%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 75% 75% at center, black 45%, transparent 85%)",
             }}
-          />
+          >
+            <Image
+              src="/hero-bg.png"
+              alt="Detektiv při práci"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
