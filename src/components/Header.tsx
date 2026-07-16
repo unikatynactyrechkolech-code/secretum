@@ -25,7 +25,7 @@ export default function Header() {
             width={140}
             height={140}
             priority
-            className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+            className="h-8 w-8 rounded-full object-cover sm:h-9 sm:w-9"
           />
           <div className="leading-tight">
             <p className="font-heading text-sm tracking-[0.12em] text-white sm:text-base">

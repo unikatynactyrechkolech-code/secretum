@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="cs"
       className={`${poppins.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="h-full flex flex-col overflow-hidden bg-black text-white">
+      <body className="min-h-full flex flex-col bg-black text-white lg:h-full lg:overflow-hidden">
         {children}
         <Analytics />
       </body>
