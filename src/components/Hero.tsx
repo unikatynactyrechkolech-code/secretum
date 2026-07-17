@@ -23,7 +23,7 @@ export default function Hero() {
           <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-accent sm:text-xs lg:mb-3 lg:text-sm">
             DETEKTIVNÍ KANCELÁŘ
           </p>
-          <h1 className="font-heading text-xl leading-tight tracking-wide text-white sm:text-xl lg:text-3xl xl:text-4xl">
+          <h1 className="font-heading text-lg leading-tight tracking-wide text-white sm:text-lg lg:text-2xl xl:text-3xl">
             PRAVDA UKRYTÁ
             <br />
             <span className="text-accent">V DETAILECH</span>

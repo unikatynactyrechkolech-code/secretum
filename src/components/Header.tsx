@@ -25,13 +25,13 @@ export default function Header() {
             width={140}
             height={140}
             priority
-            className="h-8 w-8 rounded-full object-cover sm:h-9 sm:w-9"
+            className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
           />
           <div className="leading-tight">
-            <p className="font-heading text-base tracking-[0.12em] text-white sm:text-lg">
+            <p className="font-heading text-2xl tracking-[0.12em] text-white sm:text-3xl">
               SECRETUM
             </p>
-            <p className="text-[8px] tracking-[0.3em] text-accent sm:text-[9px]">
+            <p className="text-[9px] tracking-[0.3em] text-accent sm:text-[10px]">
               DETEKTIVNÍ SLUŽBY
             </p>
           </div>
