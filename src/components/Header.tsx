@@ -28,7 +28,7 @@ export default function Header() {
             className="h-8 w-8 rounded-full object-cover sm:h-9 sm:w-9"
           />
           <div className="leading-tight">
-            <p className="font-heading text-sm tracking-[0.12em] text-white sm:text-base">
+            <p className="font-heading text-base tracking-[0.12em] text-white sm:text-lg">
               SECRETUM
             </p>
             <p className="text-[8px] tracking-[0.3em] text-accent sm:text-[9px]">

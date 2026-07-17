@@ -12,10 +12,10 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover brightness-110 contrast-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-2 px-5 py-3 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-10 lg:py-0">
@@ -23,7 +23,7 @@ export default function Hero() {
           <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-accent sm:text-xs lg:mb-3 lg:text-sm">
             DETEKTIVNÍ KANCELÁŘ
           </p>
-          <h1 className="font-heading text-2xl leading-tight tracking-wide text-white sm:text-2xl lg:text-4xl xl:text-5xl">
+          <h1 className="font-heading text-xl leading-tight tracking-wide text-white sm:text-xl lg:text-3xl xl:text-4xl">
             PRAVDA UKRYTÁ
             <br />
             <span className="text-accent">V DETAILECH</span>
@@ -68,13 +68,13 @@ export default function Hero() {
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-cover brightness-110 contrast-110"
           />
           <div
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 60% 60% at center, transparent 0%, black 100%)",
+                "radial-gradient(ellipse 62% 62% at center, rgba(0,0,0,0) 10%, rgba(0,0,0,0.78) 100%)",
             }}
           />
         </div>
