@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { UserRound, ListChecks } from "lucide-react";
+import type { TabId } from "@/app/page";
 
-export default function Hero() {
+export default function Hero({ onNavigate }: { onNavigate: (id: TabId) => void }) {
   return (
-    <section id="uvod" className="relative flex flex-1 items-center overflow-hidden bg-black">
+    <section className="relative flex flex-1 items-center overflow-hidden bg-black">
       {/* Mobile background image with dark overlay */}
       <div className="absolute inset-0 md:hidden">
         <Image
@@ -41,22 +42,22 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col gap-2.5 sm:flex-row lg:mt-6 lg:gap-3">
-            <a
-              href="#kontakt"
-              className="flex items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-red-700 sm:text-sm lg:px-7 lg:py-3.5"
+            <button
+              onClick={() => onNavigate("kontakt")}
+              className="flex items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-red-700 active:scale-95 sm:text-sm lg:px-7 lg:py-3.5"
             >
               <UserRound size={14} className="lg:hidden" />
               <UserRound size={18} className="hidden lg:block" />
               NEZÁVAZNÁ KONZULTACE
-            </a>
-            <a
-              href="#sluzby"
-              className="flex items-center justify-center gap-2 rounded-md border border-white/30 px-4 py-2.5 text-xs font-semibold tracking-wide text-white transition-colors hover:border-accent hover:text-accent sm:text-sm lg:px-7 lg:py-3.5"
+            </button>
+            <button
+              onClick={() => onNavigate("sluzby")}
+              className="flex items-center justify-center gap-2 rounded-md border border-white/30 px-4 py-2.5 text-xs font-semibold tracking-wide text-white transition-colors hover:border-accent hover:text-accent active:scale-95 sm:text-sm lg:px-7 lg:py-3.5"
             >
               <ListChecks size={14} className="lg:hidden" />
               <ListChecks size={18} className="hidden lg:block" />
               NAŠE SLUŽBY
-            </a>
+            </button>
           </div>
         </div>
 

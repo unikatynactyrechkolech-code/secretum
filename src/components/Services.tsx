@@ -10,24 +10,28 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="sluzby" className="shrink-0 border-t border-white/10 bg-black">
-      <div className="mx-auto grid max-w-7xl grid-cols-3 gap-x-1 gap-y-1 px-4 py-1 sm:grid-cols-5 lg:gap-y-2 lg:px-10 lg:py-3">
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-5 py-4 sm:px-6 lg:px-10">
+      <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-accent sm:text-xs">
+        CO NABÍZÍME
+      </p>
+      <h2 className="mb-6 font-heading text-xl tracking-wide text-white sm:text-2xl lg:mb-10 lg:text-3xl">
+        NAŠE <span className="text-accent">SLUŽBY</span>
+      </h2>
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-y-8">
         {services.map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-0.5 text-center lg:gap-2"
+            className="flex flex-col items-center gap-2 text-center lg:gap-3"
           >
-            <div className="flex h-5 w-5 items-center justify-center rounded-full border border-accent/60 text-accent sm:h-9 sm:w-9 lg:h-12 lg:w-12">
-              <Icon size={11} className="sm:hidden" />
-              <Icon size={18} className="hidden sm:block lg:hidden" />
-              <Icon size={22} className="hidden lg:block" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/60 text-accent sm:h-14 sm:w-14">
+              <Icon size={22} />
             </div>
-            <p className="text-[7px] font-semibold tracking-wide text-white sm:text-[10px] lg:text-sm">
+            <p className="text-xs font-semibold tracking-wide text-white sm:text-sm">
               {label}
             </p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
