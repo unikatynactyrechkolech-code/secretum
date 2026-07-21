@@ -28,10 +28,10 @@ export default function Header() {
             className="h-10 w-10 rounded-full object-cover sm:h-12 sm:w-12"
           />
           <div className="leading-tight">
-            <p className="font-heading text-2xl tracking-[0.12em] text-white sm:text-3xl">
+            <p className="font-heading text-base tracking-[0.12em] text-white sm:text-lg">
               SECRETUM
             </p>
-            <p className="text-[9px] tracking-[0.3em] text-accent sm:text-[10px]">
+            <p className="text-[8px] tracking-[0.3em] text-accent sm:text-[9px]">
               DETEKTIVNÍ SLUŽBY
             </p>
           </div>
@@ -42,38 +42,48 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-xs font-medium tracking-wider transition-colors hover:text-accent ${
-                i === 0 ? "border-b-2 border-accent pb-1 text-accent" : "text-white"
+              className={`group relative py-1 text-xs font-medium tracking-wider transition-all duration-200 ease-out hover:text-accent active:scale-90 ${
+                i === 0 ? "text-accent" : "text-white"
               }`}
             >
               {link.label}
+              <span
+                className={`absolute -bottom-0.5 left-0 h-[2px] bg-accent transition-all duration-300 ease-out ${
+                  i === 0 ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </a>
           ))}
         </nav>
 
         <button
-          className="text-white lg:hidden"
+          className="text-white transition-transform duration-200 active:scale-90 lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Otevřít menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <span className="inline-block transition-transform duration-300" style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)" }}>
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </span>
         </button>
       </div>
 
-      {open && (
-        <nav className="flex flex-col gap-1 bg-black/95 px-6 pb-6 lg:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="border-b border-white/10 py-3 text-sm tracking-wider text-white hover:text-accent"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      )}
+      <nav
+        className={`flex flex-col gap-1 overflow-hidden bg-black/95 px-6 transition-all duration-300 ease-out lg:hidden ${
+          open ? "max-h-96 pb-6 opacity-100" : "max-h-0 pb-0 opacity-0"
+        }`}
+      >
+        {navLinks.map((link, i) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className="border-b border-white/10 py-3 text-sm tracking-wider text-white transition-all duration-200 ease-out active:scale-95 active:text-accent hover:pl-2 hover:text-accent"
+            style={{ transitionDelay: open ? `${i * 40}ms` : "0ms" }}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }
