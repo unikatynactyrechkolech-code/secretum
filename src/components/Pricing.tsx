@@ -1,5 +1,3 @@
-import { Mail } from "lucide-react";
-
 export default function Pricing() {
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col justify-center px-5 py-4 sm:px-6 lg:px-10">
@@ -16,9 +14,8 @@ export default function Pricing() {
       </p>
       <a
         href="mailto:info@secretum.cz"
-        className="mt-8 flex w-fit items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-red-700 sm:text-sm"
+        className="mt-8 flex w-fit items-center justify-center rounded-md bg-accent px-6 py-3 text-xs font-semibold tracking-wide text-white transition-colors hover:bg-red-700 sm:text-sm"
       >
-        <Mail size={16} />
         VYŽÁDAT NABÍDKU
       </a>
     </div>

@@ -1,5 +1,3 @@
-import { CheckCircle2 } from "lucide-react";
-
 const reasons = [
   "Maximální diskrétnost",
   "Individuální přístup",
@@ -19,8 +17,7 @@ export default function WhyChoose() {
       </h2>
       <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:mt-8 lg:gap-y-5">
         {reasons.map((reason) => (
-          <div key={reason} className="flex items-center gap-2.5">
-            <CheckCircle2 size={18} className="shrink-0 text-accent sm:h-5 sm:w-5" />
+          <div key={reason} className="flex items-center gap-2.5 border-l-2 border-accent pl-3">
             <span className="text-xs text-white/85 sm:text-sm lg:text-base">
               {reason}
             </span>

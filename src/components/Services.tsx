@@ -1,11 +1,9 @@
-import { Eye, Search, ShieldCheck, FolderSearch, MapPin } from "lucide-react";
-
 const services = [
-  { icon: Eye, label: "SLEDOVÁNÍ OSOB" },
-  { icon: Search, label: "PROVĚŘOVÁNÍ NEVĚRY" },
-  { icon: ShieldCheck, label: "DISKRÉTNÍ ŠETŘENÍ" },
-  { icon: FolderSearch, label: "DŮKAZNÍ MATERIÁLY" },
-  { icon: MapPin, label: "PÁTRÁNÍ PO OSOBÁCH" },
+  { label: "SLEDOVÁNÍ OSOB" },
+  { label: "PROVĚŘOVÁNÍ NEVĚRY" },
+  { label: "DISKRÉTNÍ ŠETŘENÍ" },
+  { label: "DŮKAZNÍ MATERIÁLY" },
+  { label: "PÁTRÁNÍ PO OSOBÁCH" },
 ];
 
 export default function Services() {
@@ -17,15 +15,12 @@ export default function Services() {
       <h2 className="mb-6 font-heading text-xl tracking-wide text-white sm:text-2xl lg:mb-10 lg:text-3xl">
         NAŠE <span className="text-accent">SLUŽBY</span>
       </h2>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-y-8">
-        {services.map(({ icon: Icon, label }) => (
+      <div className="grid grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-5 lg:gap-y-6">
+        {services.map(({ label }) => (
           <div
             key={label}
-            className="flex flex-col items-center gap-2 text-center lg:gap-3"
+            className="flex flex-col items-center gap-2 rounded-md border border-white/10 px-3 py-4 text-center transition-colors hover:border-accent/50"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/60 text-accent sm:h-14 sm:w-14">
-              <Icon size={22} />
-            </div>
             <p className="text-xs font-semibold tracking-wide text-white sm:text-sm">
               {label}
             </p>
